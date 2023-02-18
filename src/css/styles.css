@@ -45,6 +45,15 @@ img {
   font-weight: 400;
 }
 
-p {
+p, ul {
   margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
 }
