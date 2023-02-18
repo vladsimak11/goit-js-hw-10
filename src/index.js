@@ -27,7 +27,7 @@ function onSearchCountry(event) {
       return renderListCountry(country);
     } 
     
-    return render.renderCardCountry(country);
+    return renderCardCountry(country);
 
   })
   .catch(() => {
@@ -74,5 +74,3 @@ function renderCardCountry(countryValues) {
 
   countryInfo.innerHTML = markup;
 }
-
-export default { renderCardCountry};
