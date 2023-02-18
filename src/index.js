@@ -17,9 +17,13 @@ function onSearchCountry(event) {
   event.preventDefault();
   const inputValue = event.target.value;
 
+  if (!inputValue.trim()) {
+    return;
+  }
+
   API.fetchCountries(inputValue.trim())
   .then(country => {
-    console.log(country.length);
+   
     if(country.length > 10) {
       Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
       countryList.classList.add("hidden");
@@ -46,6 +50,7 @@ function onSearchCountry(event) {
   .catch(() => {
     Notiflix.Notify.failure('Oops, there is no country with that name');
   })
+
 }
 
 function renderListCountry(countryValues) {
