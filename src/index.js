@@ -16,7 +16,7 @@ function onSearchCountry(event) {
   const inputValue = event.target.value;
   const inputLength = event.target.value.length;
 
-  API.fetchCountries(inputValue)
+  API.fetchCountries(inputValue.trim())
   .then(country => {
     
     if(country.length > 10) {
